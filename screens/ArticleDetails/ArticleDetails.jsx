@@ -50,7 +50,9 @@ export const ArticleDetails = memo(({ route, navigation }) => {
       });
   };
 
-  useEffect(() => fetchArticle, []);
+  useEffect(() => {
+    fetchArticle();
+  }, []);
 
   useEffect(() => {
     if (article) {

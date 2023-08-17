@@ -27,7 +27,9 @@ export const Home = memo(({ navigation }) => {
       });
   };
 
-  useEffect(() => fetchArticles, []);
+  useEffect(() => {
+    fetchArticles();
+  }, []);
 
   if (isLoading) {
     return <Loading />;
